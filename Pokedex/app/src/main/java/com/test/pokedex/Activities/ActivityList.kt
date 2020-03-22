@@ -3,11 +3,14 @@ package com.test.pokedex.Activities
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.JsonArray
+import com.koushikdutta.ion.ImageViewBitmapInfo
 import com.koushikdutta.ion.Ion
 import com.test.pokedex.Adapters.AdapterList
 import com.test.pokedex.R
@@ -33,10 +36,6 @@ class ActivityList : AppCompatActivity() {
         initializeData()
 
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
     }
 
     fun initializeCoponents(){
