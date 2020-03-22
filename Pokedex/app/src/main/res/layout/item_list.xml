@@ -25,42 +25,5 @@
         android:id="@+id/pokemon_name"
         />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pokemon"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:id="@+id/pokemon_number"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pokemon"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:id="@+id/pokemon_types"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pokemon"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:id="@+id/pokemon_base"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pokemon"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:id="@+id/pokemon_movimientos"
-        />
+    
 </LinearLayout>
