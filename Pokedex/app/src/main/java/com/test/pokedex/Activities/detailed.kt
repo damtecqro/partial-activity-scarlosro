@@ -138,7 +138,7 @@ class detailed : AppCompatActivity() {
                         val movimientos_aux = data.get("moves").asJsonArray
                         for(n in 0.until(movimientos_aux.size())){
                             val nombre_movimiento = movimientos_aux.get(n).asJsonObject.get("move").asJsonObject.get("name")
-                            val nombre_string = nombre_movimiento.toString()
+                            val nombre_string = nombre_movimiento.toString().replace("\"", "")
                             aux2+=nombre_string
                             aux2+="\n"
                         }
@@ -155,7 +155,7 @@ class detailed : AppCompatActivity() {
                         for(n in 0.until(stats.size())){
                             val basestat = stats.get(n).asJsonObject.get("base_stat")
                             val stat_name = stats.get(n).asJsonObject.get("stat").asJsonObject.get("name")
-                            aux3 += stat_name
+                            aux3 += stat_name.toString().replace("\"", "")
                             aux3+= "\n"
                         }
                         pokemonbase.text = aux3
