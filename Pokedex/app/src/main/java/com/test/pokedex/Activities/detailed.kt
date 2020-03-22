@@ -7,11 +7,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 import com.koushikdutta.ion.Ion
 import com.test.pokedex.R
+import kotlinx.android.synthetic.main.activity_list.*
+import com.test.pokedex.Adapters.AdapterList
 
 class detailed : AppCompatActivity() {
 
@@ -28,6 +32,9 @@ class detailed : AppCompatActivity() {
     private lateinit var pokemontipos : TextView
     private lateinit var pokemonbase : TextView
     private lateinit var pokemonmovimientos : TextView
+    private lateinit var adapter: AdapterList
+
+
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
@@ -35,6 +42,10 @@ class detailed : AppCompatActivity() {
         manageIntent()
         initializeComponents()
         initializeData()
+    }
+
+    fun AdapterList(context:Context){
+        this.contexto = context
     }
 
     private fun manageIntent(){
@@ -50,6 +61,22 @@ class detailed : AppCompatActivity() {
         pokemontipos = findViewById(R.id.pokemon_types)
         pokemonmovimientos = findViewById(R.id.pokemon_movimientos)
         pokemonbase = findViewById(R.id.pokemon_base)
+    }
+
+
+    private fun initializeList(){
+        linearLayoutManager = LinearLayoutManager(contexto)
+        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
+        linearLayoutManager.scrollToPosition(0)
+
+
+        adapter = AdapterList()
+       // adapter.AdapterList(contexto,data)
+
+        recycler_view_list.layoutManager = linearLayoutManager
+        recycler_view_list.adapter = adapter
+        recycler_view_list.setHasFixedSize(true)
+        recycler_view_list.itemAnimator = DefaultItemAnimator()
     }
 
     private fun initializeData(){
