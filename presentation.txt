@@ -1,0 +1,21 @@
+#######################################################
+
+CARLOS ALFONSO SÁNCHEZ ROSALES
+MATRÍCULA A01703280
+ITESM CAMPUS QUERETARO
+DESARROLLO DE APLICACIONES MÓVILES
+
+
+SEMESTRE FEBRERO - JUNIO 2020
+
+What made it easier for you to implement the view?
+The base of the project help me to develop the activity, so I could watch and understand a bit more the code
+and to have refereces to make my activity
+
+What made it difficult for you to implement the view?
+I really don't undestand of all the "classes", so I had to understand the code given by Alejandro.
+I had to research for some methods that we used and undestand what it do.
+Also, for me was difficult to understand some methods and understand about Json.
+
+
+
